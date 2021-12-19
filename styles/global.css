@@ -1,0 +1,59 @@
+/* CSS RESET */
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Color variables */
+html{
+    --black: #0D114F;
+    --white: #FAFAFA;
+    --red: #E83F5B;
+    --light-blue: #E0ECFF;
+    --blue: #3485FF;
+    --background: #F6FAFF;
+    --overlay: #040911;
+    --icon-details: #A5B0C1;
+
+    --grey-dark: #4D5E77;
+    --grey-blue: #A1B2CD;
+    --grey-light: #E5EAF1;
+    /* 1 rem = 16px (User Agent) = 100% (User Agent) */
+    /* Usando font-size 62.5% faz o padrão ser 10px ao invés de 16, sendo assim se um font-size do layout for 28px por exemplo, basta dividir este valor por 10 (2.8rem) para se ter o valor em rem, tornando assim mais fácil a conversão */
+    font-size: 62.5%;
+
+}
+
+body{
+    height: 100vh; /* view height, 100% da altura da view*/
+    /*width: 100vw;  view width, 100% da largura da view*/
+    background: var(--background);
+}
+
+body, button, input, textarea{
+    /* função clamp()  recebe três parametros de um intervalo de tamanhos. O primeiro é o menor tamanho que o elemento vai receber, a segunda é o padrão e a terceira o maior tamanho, para tela muito grandes se ajustarem melhor */
+    font-size: clamp(14px, 1.6rem, 2vw);
+    font-family: 'Open Sans', sans-serif;    
+}
+
+.content{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sr-only{
+    /* O 'display: none;' não pode ser usado pois nem os leitores de tela conseguiriam achar ao elemento, nem os motores de busca, por isso, é necessário o código abaixo para esconder o elemento na tela mas deixá-los com acessibilidade. *Código do tailwindcss* */
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+
+}
