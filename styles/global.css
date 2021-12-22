@@ -57,3 +57,54 @@ body, button, input, textarea{
     border-width: 0;
 
 }
+
+/* INPUT / BUTTONS */
+input, button, .button{
+    height: 5rem;
+    border-radius: .8rem;    
+}
+
+button, .button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    line-height: 0;
+
+    display: flex;
+    /* Alinhamento vertical */
+    align-items: center;
+    /* Alinhamento horizontal */
+    justify-content: center;
+    background: var(--blue);
+    color:var(--white);
+    cursor: pointer;
+
+    transition: filter .3s;
+}
+
+button:hover, .button:hover{
+    /* propriedade filter com funcao brightness dá um efeito de 'clarear'
+    o elemento, no caso em 20% */
+    filter: brightness(1.2);
+}
+
+button > img, 
+.button > img{
+    margin-right: 2rem;
+    width: 2rem;
+}
+
+button.outlined,
+.button.outlined{
+    background: var(--white);
+    color: var(--blue);
+    border: .2rem solid var(--blue);
+}
+
+.content header{
+    width: 80%;
+    margin: 3.5rem auto;
+}
+
+.content header img{
+    width: 16.7rem;
+}
