@@ -28,6 +28,7 @@ html{
 }
 
 body{
+    display: flex;
     height: 100vh; /* view height, 100% da altura da view*/
     /*width: 100vw;  view width, 100% da largura da view*/
     background: var(--background);
