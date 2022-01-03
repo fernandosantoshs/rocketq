@@ -21,6 +21,7 @@ html{
     --grey-dark: #4D5E77;
     --grey-blue: #A1B2CD;
     --grey-light: #E5EAF1;
+    --grey-medium: #EAECF2;
     /* 1 rem = 16px (User Agent) = 100% (User Agent) */
     /* Usando font-size 62.5% faz o padrão ser 10px ao invés de 16, sendo assim se um font-size do layout for 28px por exemplo, basta dividir este valor por 10 (2.8rem) para se ter o valor em rem, tornando assim mais fácil a conversão */
     font-size: 62.5%;
@@ -100,6 +101,20 @@ button.outlined,
     color: var(--blue);
     border: .2rem solid var(--blue);
 }
+
+button.red,
+.button.red{
+    background: var(--red);
+    color: var(--white);
+}
+
+button.grey,
+.button.grey{
+    background: var(--grey-light);
+    color: var(--grey-dark);
+}
+
+/* Header */
 
 .content header{
     width: 80%;
